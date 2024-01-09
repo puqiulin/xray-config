@@ -34,7 +34,8 @@
             "email": "jack@mac",
             "level": 0
           }
-        ]
+        ],
+        "decryption": "none"
       }
     },
     {
