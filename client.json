@@ -1,0 +1,44 @@
+{
+  "inbounds": [
+    {
+      "port": 9595,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "107.172.133.222",
+            "port": 9595,
+            "users": [
+              {
+                "id": "3bd81e0d-9d62-47fa-b3bf-8e5c576bc97b"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "freedom",
+      "tag": "direct"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      {
+        "type": "field",
+        "ip": ["geoip:private","geoip:cn"],
+        "outboundTag": "direct"
+      }
+    ]
+  }
+}
