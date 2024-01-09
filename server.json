@@ -11,7 +11,8 @@
         "outboundTag": "api",
         "type": "field"
       }
-    ]
+    ],
+    "domainStrategy": "AsIs"
   },
   "inbounds": [
     {
@@ -20,6 +21,7 @@
       "settings": {
         "clients": [
           {
+            "email": "jack@mac",
             "id": "3bd81e0d-9d62-47fa-b3bf-8e5c576bc97b"
           }
         ]
@@ -44,5 +46,19 @@
   "api": {
     "tag": "api",
     "services": ["HandlerService", "LoggerService", "StatsService"]
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "statsUserUplink": true,
+        "statsUserDownlink": true
+      }
+    },
+    "system": {
+      "statsInboundUplink": true,
+      "statsInboundDownlink": true,
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
   }
 }
