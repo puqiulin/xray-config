@@ -23,32 +23,6 @@
       "statsOutboundDownlink": true
     }
   },
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "type": "field",
-        "inboundTag": [
-          "api"
-        ],
-        "outboundTag": "api"
-      },
-      {
-        "type": "field",
-        "domain": [
-          "geosite:cn"
-        ],
-        "outboundTag": "wireguard"
-      },
-      {
-        "type": "field",
-        "ip": [
-          "geoip:cn"
-        ],
-        "outboundTag": "wireguard"
-      }
-    ]
-  },
   "inbounds": [
     {
       "port": 9595,
@@ -58,11 +32,9 @@
           {
             "id": "3bd81e0d-9d62-47fa-b3bf-8e5c576bc97b",
             "email": "jack@mac",
-            "level": 0,
-            "flow": "xtls-rprx-vision"
+            "level": 0
           }
-        ],
-        "decryption": "none"
+        ]
       }
     },
     {
@@ -79,5 +51,17 @@
     {
       "protocol": "freedom"
     }
-  ]
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api"
+      }
+    ]
+  }
 }
