@@ -1,7 +1,7 @@
 #!/bin/bash
 
 _APISERVER=127.0.0.1:18080
-_V2CTL=/usr/local/bin/v2ctl
+_V2CTL=/usr/local/bin/xray
 
 apidata () {
     local ARGS=
