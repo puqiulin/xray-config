@@ -2,6 +2,17 @@
   "log":{
     "loglevel":"error"
   },
+  "routing": {
+    "rules": [
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      }
+    ]
+  },
   "inbounds": [
     {
       "port": 9595,
@@ -13,6 +24,15 @@
           }
         ]
       }
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 8080,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "tag": "api"
     }
   ],
   "outbounds": [
@@ -20,5 +40,9 @@
       "protocol": "freedom"
     }
   ],
-  "status":{}
+  "status": {},
+  "api": {
+    "tag": "api",
+    "services": ["HandlerService", "LoggerService", "StatsService"]
+  }
 }
