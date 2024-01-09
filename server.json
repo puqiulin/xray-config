@@ -86,21 +86,7 @@
   ],
   "outbounds": [
     {
-      "tag": "direct",
       "protocol": "freedom"
-    },
-    {
-      "tag": "wireguard",
-      "protocol": "wireguard",
-      "settings": {
-        "secretKey": "",
-        "peers": [
-          {
-            "publicKey": "bm=",
-            "endpoint": "engage.cloudflareclient.com:2408"
-          }
-        ]
-      }
     }
   ]
 }

@@ -40,6 +40,10 @@
           }
         ]
       }
+    },
+    {
+      "protocol": "freedom",
+      "tag": "direct"
     }
   ],
   "routing": {
