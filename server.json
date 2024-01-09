@@ -57,9 +57,9 @@
         "clients": [
           {
             "id": "3bd81e0d-9d62-47fa-b3bf-8e5c576bc97b",
+            "email": "jack@mac",
             "flow": "xtls-rprx-vision",
-            "level": 0,
-            "email": "jack@mac"
+            "level": 0
           }
         ],
         "decryption": "none"
