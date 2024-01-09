@@ -9,15 +9,6 @@
       "protocol": "socks",
       "settings": {
         "udp": true
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "routeOnly": true
       }
     }
   ],
@@ -33,7 +24,6 @@
               {
                 "id": "3bd81e0d-9d62-47fa-b3bf-8e5c576bc97b",
                 "email": "jack@mac",
-                "encryption": "none",
                 "flow": "xtls-rprx-vision"
               }
             ]

@@ -58,20 +58,11 @@
           {
             "id": "3bd81e0d-9d62-47fa-b3bf-8e5c576bc97b",
             "email": "jack@mac",
-            "flow": "xtls-rprx-vision",
-            "level": 0
+            "level": 0,
+            "flow": "xtls-rprx-vision"
           }
         ],
         "decryption": "none"
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ],
-        "routeOnly": true
       }
     },
     {
