@@ -33,6 +33,11 @@
             "id": "3bd81e0d-9d62-47fa-b3bf-8e5c576bc97b",
             "email": "jack@mac",
             "level": 0
+          },
+          {
+            "id": "1aac6454-55f1-4b04-8284-423f147e332e",
+            "email": "jack@iphone",
+            "level": 0
           }
         ],
         "decryption": "none"
