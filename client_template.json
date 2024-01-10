@@ -1,6 +1,6 @@
 {
-  "log":{
-    "loglevel":"info"
+  "log": {
+    "loglevel": "info"
   },
   "inbounds": [
     {
@@ -22,7 +22,7 @@
             "port": 9595,
             "users": [
               {
-                "id": "XRAY_UUID",
+                "id": "%XRAY_MAC_UUID%",
                 "email": "jack@mac",
                 "encryption": "none"
               }
@@ -41,7 +41,10 @@
     "rules": [
       {
         "type": "field",
-        "ip": ["geoip:private","geoip:cn"],
+        "ip": [
+          "geoip:private",
+          "geoip:cn"
+        ],
         "outboundTag": "direct"
       }
     ]

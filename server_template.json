@@ -30,12 +30,12 @@
       "settings": {
         "clients": [
           {
-            "id": "XRAY_UUID",
+            "id": "%XRAY_MAC_UUID%",
             "email": "jack@mac",
             "level": 0
           },
           {
-            "id": "1aac6454-55f1-4b04-8284-423f147e332e",
+            "id": "%XRAY_IPHONE_UUID%",
             "email": "jack@iphone",
             "level": 0
           }
