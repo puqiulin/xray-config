@@ -1,0 +1,46 @@
+{
+  "log": {
+    "loglevel":"debug"
+  },
+  "inbounds": [
+    {
+      "port": 1080,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "server ip",
+            "port": 10086,
+            "users": [
+              {
+                "id": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "protocol": "freedom",
+      "tag": "direct"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPOnDemand",
+    "rules": [
+      {
+        "ip": ["geoip:private", "geoip:cn"],
+        "outboundTag": "direct"
+      }
+    ]
+  }
+}
